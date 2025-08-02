@@ -131,3 +131,5 @@ prospects.txt
 .vscode
 
 token.txt
+temp.txt
+.env
