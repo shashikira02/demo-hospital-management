@@ -21,7 +21,7 @@ class Patient(models.Model):
         ('Loss of speech or movement', 'Loss of speech or movement'),
     )
 
-    symptoms = MultiSelectField(choices=SYMPTOMS, null=True)
+    symptoms = MultiSelectField(choices=SYMPTOMS, max_length=200, null=True)
     prior_ailments = models.TextField()
     bed_num = models.ForeignKey("Bed", on_delete=models.CASCADE)
     dob = models.DateField(null=True)
