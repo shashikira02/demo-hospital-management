@@ -77,27 +77,27 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
-print("DB_NAME:", os.environ.get('DB_NAME'), file=sys.stderr)
-print("DB_USER:", os.environ.get('DB_USER'), file=sys.stderr)
-print("DB_PASSWORD:", os.environ.get('DB_PASSWORD'), file=sys.stderr)
-print("DB_HOST:", os.environ.get('DB_HOST'), file=sys.stderr)
-print("DB_PORT:", os.environ.get('DB_PORT'), file=sys.stderr)
+# print("DB_NAME:", os.environ.get('DB_NAME'), file=sys.stderr)
+# print("DB_USER:", os.environ.get('DB_USER'), file=sys.stderr)
+# print("DB_PASSWORD:", os.environ.get('DB_PASSWORD'), file=sys.stderr)
+# print("DB_HOST:", os.environ.get('DB_HOST'), file=sys.stderr)
+# print("DB_PORT:", os.environ.get('DB_PORT'), file=sys.stderr)
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME', 'hospital_management'),
-        'USER': os.environ.get('DB_USER', 'hospital_user'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': os.environ.get('DB_PORT', '3306'),
         'OPTIONS': {
             'charset': 'utf8mb4',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'sql_mode': 'STRICT_TRANS_TABLES',
         },
     }
 }
+
 
 # Password validation
 
